@@ -9,15 +9,16 @@ function logSection(title: string) {
 
 function logBooks(title: string) {
   logSection(title);
+  // b — це вже рядок, не викликай .getInfo()
   for (const b of library.listAll()) {
-    console.log(b.getInfo());
+    console.log(b); 
   }
 }
 
 function logAvailable(title: string) {
   logSection(title);
   for (const b of library.listAvailable()) {
-    console.log(b.getInfo());
+    console.log(b);
   }
 }
 
